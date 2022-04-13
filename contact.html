@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- Required meta tags always come first --><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link href="../css/animate.css" rel="stylesheet" /><!-- Bootstrap CSS -->
+	<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" rel="stylesheet" />
+	<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet" />
+	<link href="../css/IIIT-ppp.css" rel="stylesheet" type="text/css" />
+	<title>Contact Us</title>
+	<link href="../images/front-page/logo-blue-small.png" rel="shortcut icon" type="image/x-icon" /><!--title logo-->
+</head>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- Required meta tags always come first --><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge">
+	 <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" rel="stylesheet" />
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+	<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet" />
+	<link href="http://iiitkalyani.ac.in/css/frontpage_styles.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="http://iiitkalyani.ac.in/engine1/style.css" />
+<script type="text/javascript" src="http://iiitkalyani.ac.in/engine1/jquery.js"></script>
+<script>
+
+    
+  function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    var x = document.getElementById("myAudio").autoplay;
+  document.getElementById("demo").innerHTML = x;
+}
+
+showTime();
+</script>
+        <style>
+        html,body {
+  overflow-x: hidden;
+}
+.hidden-thing {
+  position: absolute;
+  left: 100%;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+        @media only screen and (max-width: 500px) {
+ .row1{padding-top:500px;}
+}
+
+.clock {
+  
+   
+    font-size: 12px;
+    font-family: sans-serif;
+    letter-spacing: 10px;
+font-weight: bolder;
+
+}
+.carousel{
+           background-color: darkblue;
+    padding: inherit;
+    border-style: solid;
+    color: lightgray;
+    position:absolute;
+}
+.inset {border-style: outset;}
+.my-4 {
+    margin-top: 0rem!important;
+    margin-bottom: 1.5rem!important;
+        padding: 10px;
+}
+
+	 .alert {
+  position: relative;
+  background-color: #333751;
+  color: white;
+  font-size: 14px;
+  padding:5px;
+  padding-right: 35px;
+  width:100%;
+  border-radius: 0;
+  margin-bottom: 0;
+  z-index: 1000;
+}
+
+
+button:focus {
+  outline: 0;
+}
+
+.close {
+  position: absolute;
+  top: 40%;
+  right: 1%;
+  border-radius: 0;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  color: $grey;
+  cursor: pointer;
+  &:hover {
+    color: inherit;
+  }
+}
+
+.btn {
+  position: absolute;
+  right: 15px;
+  margin-top: 0;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 1.4em;
+  text-align: center;
+  width: 30px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0px;
+  padding-bottom: 2px;
+  z-index:1000;
+}
+
+.reset {
+  background-color: #333751;
+  color: white;
+  transition: background-color 0.5s linear 0.1s;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+@media only screen and (max-width: 1200px){
+ .container {
+ width:auto;
+}
+
+}
+@media only screen and (max-width: 770px){
+
+.alert {
+  font-size: 12px;
+  padding:5px;
+  padding-right: 30px;
+}
+
+.close {
+  top: 40%;
+  right: 1%;
+  font-size: 40px;
+}
+
+.btn {
+  right: 8px;
+  font-size: 1.4em;
+   width: 27px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0px;
+  padding-bottom: 2px;
+}
+  .col-md-3 mb-3{
+    padding-top:600px;
+}
+}
+#wowslider-container1 .ws_playpause {
+       display: none;
+}
+#wowslider-container1 a.ws_prev {
+    display: none;
+}
+#wowslider-container1 a.ws_next {
+    display: none;
+}
+#wowslider-container1 
+.ws_bullets a {
+    display: contents;
+}
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+	<title>Indian Institute of Information Technology</title>
+	<link href="http://iiitkalyani.ac.in/images/front-page/iiitlogo.png" rel="shortcut icon" type="image/x-icon" /><!--title logo-->
+<style>
+    html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+
+}
+.container{
+    width:100%;
+}
+</style>	
+	
+
+
+    
+    
+</head>
+<!-- <div class="iwrap">
+ <div class="i-text">i</div>
+ <a href="../php/payinfo.php"></a>
+  </div>
+    
+      <div class="payment">
+    <div class="payment-text">Payment</div>
+  <a  href="https://www.onlinesbi.com/prelogin/institutiontypedisplay.htm" target="_blank"></a>
+  </div>
+   <script>
+  (function() {
+    var cx = '006158153867003141322:jlgijze17-w';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search> -->
+
+<!--<marquee bgcolor="slateblue"  style=" font-family: Book Antiqua" behavior="scroll" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</marquee>-->
+
+
+<!-- ////////////////// --><!-- slideshow after first navbar -->
+<div class="header-top" id="top-of-page" style="background-color:rgb(0, 90, 181);">
+<div class="container" style="text-align:center;">
+  <div class="row">
+      <div class="col-sm-4" ><img  class="img-fluid" height="110px" width="350px" src="http://iiitkalyani.ac.in/images/front-page/logo/l1.png";/></div>
+      <div class="col-sm-4" ><img  class="img-fluid" height="80px" width="70px" src="http://iiitkalyani.ac.in/images/front-page/logo/l2.png";/><br><font weight="bold"; letter-spacing: 3px; color="white">"विद्याधनं सर्वधनप्रधानम्"</font></div>
+      <div class="col-sm-4" ><img class="img-fluid" height="90px" width="320px" src="http://iiitkalyani.ac.in/images/front-page/logo/l3.png";/></div>
+  </div>
+    </div>
+
+</div>
+<nav class="navbar sticky-top navbar-toggleable-sm navbar-light bg-faded" text-align="center" id="startchange" style="z-index: 999;background-color:darkblue;Border-bottom:Ridge;border-color:darkblue;">
+<div class="container-fluid">
+    
+    <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNavAltMarkup" data-toggle="collapse" type="button">
+    <span class="fa fa-bars" style="color:white"></span>
+    </button>
+
+<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+<div class="navbar-nav mr-auto" style="color: white"><a class="nav-item nav-link leaf first-nav-active" href="http://iiitkalyani.ac.in/index.php" id="first-nav"><b>Home</b></a>
+
+<div class="dropdown-link"><a class="nav-item nav-link leaf" id="first-nav"><b>About</b></a>
+
+<div class="dropdown-content" id="dropdown-content"><a href="http://iiitkalyani.ac.in/php/about_us.php">About Us</a><a href="http://iiitkalyani.ac.in/images/notifications/INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, KALYANI20220228-.pdf" target="_blank">NIRF</a><!--<a href="../images/dm.pdf" target="_blank">Director&#39;s message</a>  --><a href="http://iiitkalyani.ac.in/php/why_iiit.php">Why IIIT Kalyani</a> <a href="http://iiitkalyani.ac.in/php/staff.php">Staff</a><a href="http://iiitkalyani.ac.in/php/gallery/gallery.php" target="_blank">Gallery</a>
+<a href="http://iiitkalyani.ac.in/php/Facilities_landing_page-v6.php">All facilities</a><a href="http://iiitkalyani.ac.in/php/sports.php">Sports</a>
+<a href="http://iiitkalyani.ac.in/fmc/index.html" target="_blank">Film and Media Club (FMC)</a> <a href="http://iiitkalyani.ac.in/html/music.html" target="_blank">Symphony (Music club)</a> <a href="http://iiitkalyani.ac.in/html/algoholic3.0.html" target="_blank">Algoholic (Technical club)</a>
+<!--<a href="../php/Archive.php" target="_blank">Archives</a> -->
+</div>
+
+</div>
+<div class="dropdown-link"><a class="nav-item nav-link leaf" id="first-nav"><b>Administration</b></a>
+
+<div class="dropdown-content" id="dropdown-content"><a href="http://iiitkalyani.ac.in/php/administration.php">Administrative body</a><a href="http://iiitkalyani.ac.in/images/notification2021/IIIT Kalyani_full_BoG (1).pdf" target="_blank">Board of Governors</a><a href="http://iiitkalyani.ac.in/images/notification2021/IIIT Kalyani_Fincance Committee.pdf" target="_blank">Finance committee</a><a href="http://iiitkalyani.ac.in/images/Reconstituion of Senate IIIT Kalyani.pdf" target="_blank">Senate</a> <a href="http://iiitkalyani.ac.in/images/iiitppp/pdf1.pdf" target="_blank">IIIT Act</a> <a href="http://iiitkalyani.ac.in/images/iiitppp/191586_IIIT%20Kalyani.pdf" target="_blank">Statutes</a> <!--<a href="http://iiitkalyani.ac.in/images/notifications/68.pdf" target="_blank">Administrative Responsibilities</a>--><a href="http://iiitkalyani.ac.in/php/icc.php">Internal Complaint Committee</a>
+<a href="http://iiitkalyani.ac.in//images/Office Order-96_RTI (1).pdf" target="_blank">Right To Information</a></div>
+</div>
+<div class="dropdown-link"><a class="nav-item nav-link leaf" id="first-nav"><b>Academics</b></a>
+
+<div class="dropdown-content" id="dropdown-content"><a href="http://iiitkalyani.ac.in/php/programmes.php">Programmes</a> 
+<a href="http://iiitkalyani.ac.in/newfacultypages/faculty1.php" id="first-nav" target="_blank">Faculty</a>
+
+ <a href="http://iiitkalyani.ac.in/php/admissionall.php" target="_blank">Admissions</a> 
+<a href="http://iiitkalyani.ac.in/php/Academic_cal.php">Academic Calendar</a>
+<a href="http://iiitkalyani.ac.in/php/Course_stru.php">Course Structure</a>
+<!--<a href="#" target="_blank">E brouchure</a>-->
+<a href="http://iiitkalyani.ac.in/php/nep.php">New National Education Policy-2020</a>
+<a href="http://iiitkalyani.ac.in/php/fee_structure.php">Fee Structure</a>
+<a href="http://iiitkalyani.ac.in/php/ugregulations.php">Regulations</a>
+<a href="http://iiitkalyani.ac.in/php/nptel.php">NPTEL Collaboration</a>
+<a href="http://iiitkalyani.ac.in/images/notification2021/Circular_IIC.pdf">Institute Innovation Council</a>
+<!--<a href="../php/gaworkshop.php">Geometric Algorithms Workshop</a>-->
+</div>
+</div>
+
+<div class="dropdown-link"><a class="nav-item nav-link leaf" id="first-nav"><b>Research</b></a>
+     <div class="dropdown-content" id="dropdown-content"><a href="http://iiitkalyani.ac.in/php/publication.php">Publications</a>
+     <a href="http://iiitkalyani.ac.in/php/proj_spons.php">Sponsored Projects</a>
+      <a href="#">Sponsored Consultancy</a>
+     <a href="#">IPR</a>
+    <a href="http://iiitkalyani.ac.in/php/iic.php">IIC</a>
+          <a href="http://iiitkalyani.ac.in/php/sric.php">SRIC Cell</a>
+     </div>
+    </div>
+
+<div class="dropdown-link"><a class="nav-item nav-link leaf" id="first-nav"><b>Students</b></a>
+
+<div class="dropdown-content" id="dropdown-content"><a href="http://iiitkalyani.ac.in/images/Student_Registration.pdf" target="_blank">Current Students</a> <!--<a href="../php/admissionug.php#f-aid">Scope of Financial aid</a>--> <a href="http://iiitkalyani.ac.in/php/regul_rules.php">Regulatory rules</a> <a href="http://iiitkalyani.ac.in/php/Anti_ragging.php">Anti ragging</a> 
+<a href="http://iiitkalyani.ac.in/php/studentachievement.php" target="_blank">Students' Achievement</a>
+<a href="https://cache9.in/gallery/" target="_blank">Students' Corner</a><!-- <div class="dropdown-link"> 
+                  
+                  <a id="first-nav" class="nav-item nav-link leaf">Placements</a>
+                    	<div class="dropdown-content" id="dropdown-content">
+                        <a href="placements/index.php">Placement portal</a>
+                        <a href="placements/pdf1.pdf">Placement brochure</a> 
+                
+                    	</div> --></div>
+</div>
+
+<div class="dropdown-link"><a class="nav-item nav-link leaf" id="first-nav"><b>Placements</b></a>
+
+<div class="dropdown-content" id="dropdown-content"><a href="http://iiitkalyani.ac.in/placement" target="_blank">Placement portal</a> 
+<!--<a href="../placements/pdf1.pdf">Placement brochure</a> <a href="placements/placement-synopsis.pdf">Placement synopsis</a>
+<a href="placements/invitation.docx">Placement Invitation</a>--></div>
+</div>
+
+<div class="dropdown-link"><a href="http://iiitkalyani.ac.in/php/career.php" class="nav-item nav-link leaf" id="first-nav"><b>Career</b></a>
+
+
+</div>
+
+<!--<div class="dropdown-link"><a class="nav-item nav-link leaf" id="first-nav">Gymkhana</a>
+
+<div class="dropdown-content" id="dropdown-content"><!-- <a href="../php/sports.php">Sports Club</a> --><!--<a href="../fmc/index.html" target="_blank">Film and Media Club (FMC)</a> <a href="../php/music.php" target="_blank">Symphony (Music club)</a> <a href="../php/algoholic3.0.php" target="_blank">Algoholic (Technical club)</a></div>
+</div>-->
+
+    <div class="dropdown-link"><a class="nav-item nav-link leaf" id="first-nav"><b>Notifications</b></a>
+    <div class="dropdown-content" id="dropdown-content"><a class="nav-item nav-link leaf" href="http://iiitkalyani.ac.in/php/notifications.php" target="_blank">e-Notice Board</a><a class="nav-item nav-link leaf" href="http://iiitkalyani.ac.in/php/oldnotifications.php" target="_blank">Notice Board Archive</a><a class="nav-item nav-link leaf" href="http://iiitkalyani.ac.in/php/downloads.php" target="_blank">Downloads</a><a class="nav-item nav-link leaf" href="http://iiitkalyani.ac.in/php/archive.php" target="_blank"><b>Archives</b></a><a class="nav-item nav-link leaf" href="http://iiitkalyani.ac.in/php/oldwebsite.php" target="_blank"><b>Old Website</b></a>
+</div>
+    </div>
+    <div class="dropdown-link"><a class="nav-item nav-link leaf" id="first-nav"><b>Contact</b></a>
+
+<div class="dropdown-content" id="dropdown-content"><a href="http://iiitkalyani.ac.in/php/contact_us.php">Contact Us</a> <a href="http://iiitkalyani.ac.in/php/reach_iiit_kalyani.php">How to Reach</a></div>
+</div>
+
+</div>
+    
+
+</div>
+</div>
+</nav>
+
+<body>
+
+<div class="container">
+<div class="iiitppp">&nbsp;
+<h1>Contact Us</h1>
+<hr />&nbsp;
+<!--
+
+<h5>Mentor Director</h5>
+
+<p>Prof. Sriman Kumar Bhattacharyya<br />
+Professor and Former Head, 
+Department of Civil Engineering<br />
+Deputy Director and Director (Officiating)<br />
+Indian Institute of Technology Kharagpur, 
+Kharagpur - 721302<br />
+Former Director, 
+CSIR-Central Building Research Institute, Roorkee, 
+Roorkee - 247667<br />
+
+<b>Email: </b><a href="mailto:director@iitkgp.ac.in" title="Email Us">director@iitkgp.ac.in</a></p>
+&nbsp;
+
+<h5>Professor-In-Charge/Executive Director</h5>
+
+<p>Prof. Anupam Basu</p>
+
+<p><strong>Director</strong>, National Institute of Technology Durgapur&nbsp;&nbsp;and<br />
+<strong>Professor (on-lien),&nbsp;</strong>Indian Institute of Technology Kharagpur<br />
+<span style="line-height: 1.6471;"><strong>Email: </strong></span><a href="mailto:anupam@cse.iitkgp.ernet.in" style="line-height: 1.6471;">anupam@cse.iitkgp.ernet.in</a></p>
+&nbsp;
+
+<h5>Registrar (Offg.)</h5>
+
+<p class="contact-txt3">Mr. Sambhunath Datta, Deputy Registrar &amp; Finance Officer (acting), IIEST Shibpur.<br />
+<strong>Email: </strong> <a href="mailto:registrar@iiitkalyani.ac.in" target="_blank"> registrar@iiitkalyani.ac.in.</a></p>
+&nbsp;
+-->
+<h5>IIIT Kalyani Office</h5>
+
+<p>Email: iiitkalyani.office@gmail.com<br />
+<strong>Email: </strong><a href="mailto:office@iiitkalyani.ac.in" target="_blank">office@iiitkalyani.ac.in</a></p>
+
+<p>
+    <b>GST-19AAAGI0039Q2Z2</b><br>
+<b>PAN-AAAGI0039Q</b><br>
+<b>TAN-CALI04149F</b><br>
+</p>
+<hr>
+<h4>Website Contact Details
+</h4>
+        <p>Email id: website@iiitkalyani.ac.in</p>
+         <br><p><a href="http://iiitkalyani.ac.in/images/General Guidelines for uploading information on Website.pdf" target="_blank">Website Rules and Guidelines</a></p>
+         <!--<Button type="button"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfzO9mfsCZR23MZwn9y__0LXyu439SoTDqo8p4_mOuYtCOUTA/viewform?usp=sf_link" target="_blank">Feedback</a></Button>-->
+<hr>
+<h2 class="contact-txt3">Current&nbsp;Location</h2>
+
+<p class="contact-txt3">Indian Institute of Information Technology Kalyani,&nbsp;Webel IT Park,<br />
+(Near Buddha Park), Kalyani &ndash; 741235. Nadia, WB.<br />
+(All correspondences should be sent&nbsp;to the above address.)</p>
+<div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">MAP</h5>
+        <p><div id="map-container-google-2" class="z-depth-1-half map-container" >
+  <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.705723709442!2d88.43125034928791!3d22.961062384910523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f894fc95000001%3A0x56bfd0b3bdadb903!2sIndian+Institute+of+Information+Technology!5e0!3m2!1sen!2sin!4v1547197022997" width="550" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+  <a href="https://www.google.com/maps/place/Indian+Institute+of+Information+Technology+Kalyani/@22.961062,88.433444,15z/data=!4m5!3m4!1s0x0:0x56bfd0b3bdadb903!8m2!3d22.9610624!4d88.4334444?hl=en-US" target="_blank"><img class="img-responsive"  width="400" height="225" src="http://iiitkalyani.ac.in/images/front-page/map.png"></a>
+</div></p>
+
+      </div>
+      
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Social</h5><br><br>
+ 
+                    <div class="social-links">
+                        <a class="fa fa-google-plus-square" href="https://plus.google.com/113956524857746941344" target="_blank"></a>
+                        <a class="fa fa-facebook-square" href="https://www.facebook.com/iiitkalyani/" target="_blank"></a>
+                        <!-- <a class="fa fa-linkedin-square" href="http://www.linkedin.com/in/"></a> -->
+                        <a class="fa fa-twitter-square" href="https://twitter.com/iiit_kalyani?lang=en" target="_blank"></a>
+                        <a class="fa fa-youtube-square" href="https://www.youtube.com/channel/UCdnaperuWO_6YfXzEov6-QA/videos" target="_blank"></a>
+                    </div>
+           
+  
+<br/>
+
+
+<br/>
+&nbsp;</div>
+</div>
+<!-- footer starts -->
+</body>
+<Style>
+    //autoprefixer & reset used
+//Tested on Chrome, Firefox, IE11, and iOS.  The responsiveness & the social section is a bit off on IE11.  I'm looking to fix that.
+//It would be best to break down the flex properties into logical classes.  I've actually done that more extensively on the live Pavilion site,  but I've only included one here: flex-rw.
+
+$primary-light-blue: white;
+$primary-line-color: white;
+* {
+  box-sizing: border-box
+}
+html, body {
+  height: 100%
+}
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  //This justify-content is essentially unnecessary in Firefox and Chrome due to the flex: 1 1 auto on the main.  However, it's needed to push the footer down on IE11
+  justify-content: space-between
+  
+}
+ul {
+  list-style: none
+}
+a {
+  text-decoration: none
+}
+.generic-anchor {
+	color: white;
+	&:visited {
+		color: white
+	}
+	
+}
+.flex-rw {
+  display: flex;
+  flex-flow: row wrap;
+}
+//This main is mostly to push the footer to the bottom and for demo purposes.
+main {
+  flex: 1 1 auto; //For IE11
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 10em "Oswald", sans-serif;
+  color: rgb(155,155,155);
+  line-height: 1
+}
+footer {
+  background: rgb(55,55,55);
+  margin-top: auto;
+  width: 100%
+}
+.footer-list-top {
+  width: 33.333%
+}
+.footer-list-top > li {
+  text-align: center;
+ 
+}
+.footer-list-header {
+  padding: 10px 0 5px 0;
+  color: #fff;
+  font: 20px "Oswald", sans-serif
+}
+.footer-list-anchor {
+  font: 12px "Open Sans", sans-serif
+}
+.footer-social-section {
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 5px;
+}
+.footer-social-section::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 10px;
+  border-top: 1px solid $primary-line-color;
+  width: calc(100% - 20px)
+}
+.footer-social-overlap {
+  position: relative;
+  z-index: 2;
+  background: rgb(55,55,55);
+  padding: 0 20px
+}
+.footer-social-connect {
+  display: flex;
+  align-items: center;
+  font: 15px "Oswald", sans-serif;
+  color: #fff
+}
+.footer-social-small {
+  font-size: 0.6em;
+  padding: 0px 20px
+}
+.footer-social-overlap > a {
+  font-size: 3em
+}
+.footer-social-overlap > a:not(:first-child) {
+  margin-left: 0.38em
+}
+.footer-bottom-section {
+  width: 100%;
+  border-top: 1px solid $primary-line-color;
+  margin-top: 10px
+}
+.footer-bottom-section > div:first-child {
+  margin-right: auto
+}
+.footer-bottom-wrapper {
+  font-size: 10 px;
+  color: #fff
+}
+.footer-address {
+  display: inline;
+  font-style: normal
+}
+@media only screen and (max-width: 768px) {
+  .footer-list-header {
+    font-size: 2em
+  }
+  .footer-list-anchor {
+    font-size: 1.1em
+  }
+  .footer-social-connect {
+    font-size: 2.5em
+  }
+  .footer-social-overlap > a {
+    font-size: 2.24em
+  }
+  .footer-bottom-wrapper {
+    font-size: 1.3em
+  }
+}
+@media only screen and (max-width: 568px) {
+  main {
+    font-size: 5em
+  }
+  .footer-list-top {
+    width: 100%
+  }
+  .footer-list-header {
+    font-size: 3em;
+  }
+  .footer-list-anchor {
+    font-size: 1.5em
+  }
+  .footer-social-section {
+    justify-content: center
+  }
+  .footer-social-section::after {
+    top: 25%
+  }
+  .footer-social-connect {
+    margin-bottom: 10px;
+    padding: 0 10px
+  }
+  .footer-social-overlap {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-social-icons-wrapper {
+    width: 100%;
+    padding: 0
+  }
+  .footer-social-overlap > a:not(:first-child) {
+    margin-left: 20px;
+  }
+  .footer-bottom-section {
+    padding: 0 5px 10px 5px
+  }
+  .footer-bottom-wrapper {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px
+  }
+}
+@media only screen and (max-width: 480px) {
+  .footer-social-overlap > a {
+    margin: auto
+  }
+  .footer-social-overlap > a:not(:first-child) {
+    margin-left: 0;
+  }
+  .footer-bottom-rights {
+    display: block
+  }
+}
+@media only screen and (max-width: 320px) {
+  .footer-list-header {
+    font-size: 2.2em
+  }
+  .footer-list-anchor {
+    font-size: 1.2em
+  }
+  .footer-social-connect {
+    font-size: 2.4em
+  }
+  .footer-social-overlap > a {
+    font-size: 2.24em
+  }
+  .footer-bottom-wrapper {
+    font-size: 1.3em
+  }
+}
+
+</Style>
+
+<main>
+  </main>
+<!--Some of this HTML is directly from Pavilion.  You can change it to whatever you want if you want to mimic this design.-->
+<footer class="flex-rw" style="background-color: darkblue;padding:0px;">
+  
+  <ul class="footer-list-top">
+    <li>
+      <h4 class="footer-list-header"></h4></li>
+       <li><a href="http://iiitkalyani.ac.in/newfacultypages/faculty1.php" id="first-nav" class="nav-item nav-link leaf" target="_blank">Faculty</a></li>
+    <li><a href="http://iiitkalyani.ac.in/php/sric.php" class="nav-item nav-link leaf" target="_blank">SRIC Cell</a></li>
+     <li><a href='' ><a href="http://iiitkalyani.ac.in/php/downloads.php" class="nav-item nav-link leaf" target="_blank">Downloads</a></li>
+    <li><a href="http://iiitkalyani.ac.in/php/about_us.php" class="nav-item nav-link leaf" target="_blank">About Us</a></li>
+    <li><a href="http://iiitkalyani.ac.in/php/administration.php" class="nav-item nav-link leaf" target="_blank">Administrative body</a></li>
+    <li><a href="http://iiitkalyani.ac.in/php/studentachievement.php" class="nav-item nav-link leaf" target="_blank">Students' Achievement</a></li>
+
+     
+  </ul>
+  <ul class="footer-list-top">
+    <li>
+      <h4 class="footer-list-header"><b><u>Quick Links</u></b></h4></li>
+
+    <li><a href="http://iiitkalyani.ac.in/php/gallery/gallery.php" class="nav-item nav-link leaf" target="_blank">Gallery</a></li>
+    <li><a href="http://iiitkalyani.ac.in/placement/" class="nav-item nav-link leaf" target="_blank">Placement portal</a></li>
+    <li><a class="nav-item nav-link leaf" href="http://iiitkalyani.ac.in/php/notifications.php" target="_blank">e-Notice Board<img src="../images/new.gif" height="20px" width="40px"></a></li>
+
+    <li><a href='' ><a href="http://iiitkalyani.ac.in/php/rti.php" class="nav-item nav-link leaf" target="_blank">Right To Information</a></li>
+     <li><a href="http://iiitkalyani.ac.in/images/The Constitution of India.pdf" class="nav-item nav-link leaf" target="_blank">Preamble of the Constitution of India </a></li>
+  </ul>
+  <ul class="footer-list-top">
+    <li id='help'>
+      <h4 class="footer-list-header" class="nav-item nav-link leaf" target="_blank"></h4></li>
+ 
+<li><a href="http://iiitkalyani.ac.in/php/fee_structure.php" class="nav-item nav-link leaf" target="_blank">Fee Structure</a></li>
+<li><a href="http://iiitkalyani.ac.in/php/ugregulations.php" class="nav-item nav-link leaf" target="_blank">UG Regulations</a></li>
+
+<li><a href="http://iiitkalyani.ac.in/php/nptel.php" class="nav-item nav-link leaf" target="_blank">NPTEL Collaboration</a></li>
+  <li><a href="http://iiitkalyani.ac.in/php/Academic_cal.php" class="nav-item nav-link leaf" target="_blank">Academic Calendar</a> </li>
+  <li> <a href="http://iiitkalyani.ac.in/php/nep.php" class="nav-item nav-link leaf" target="_blank">New National Education Policy-2020</a></li>
+  <li><a href="http://iiitkalyani.ac.in/php/iic.php" class="nav-item nav-link leaf" target="_blank">Institution's Innovation Council (IIC)</a></li>
+  </ul>
+  
+  <section class="footer-social-section flex-rw" >
+      
+      <span class="footer-social-overlap footer-social-icons-wrapper" style="Background-color:darkblue;">
+      <a href="" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
+      <a href="https://www.facebook.com/iiitkalyani/" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/iiit_kalyani?lang=en" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
+      <a href="" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCdnaperuWO_6YfXzEov6-QA/videos" class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
+      <a href="https://plus.google.com/113956524857746941344" class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
+      </span>
+  </section>
+  <section class="footer-bottom-section flex-rw">
+<div class="footer-bottom-wrapper" style="text-align:center;">   
+<i class="fa fa-copyright" role="copyright">
+ 
+    
+</i> Copyright © 2019 IIIT Kalyani. All rights reserved. </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Visitor Number (Last 3 months): 213775 
+    </div>
+    <div class="footer-bottom-wrapper">
+      </div>
+  </section>
+</footer></html>
