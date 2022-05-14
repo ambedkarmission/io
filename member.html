@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- Required meta tags always come first --><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link href="../css/animate.css" rel="stylesheet" /><!-- Bootstrap CSS -->
+  <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" rel="stylesheet" />
+  <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet" />
+  <link href="../css/IIIT-ppp.css" rel="stylesheet" type="text/css" />
+  <title>Board of Trustee</title>
+  
+</head>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- Required meta tags always come first --><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge">
+   <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" rel="stylesheet" />
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+  <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet" />
+  <link href="http://ambedkarmission.in/css/frontpage_styles.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="http://ambedkarmission.in/css/style.css" />
+<script type="text/javascript" src="http://ambedkarmission.in/css/jquery.js"></script>
+<script>
+
+    
+  function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    var x = document.getElementById("myAudio").autoplay;
+  document.getElementById("demo").innerHTML = x;
+}
+
+showTime();
+</script>
+        <style>
+        html,body {
+  overflow-x: hidden;
+}
+.hidden-thing {
+  position: absolute;
+  left: 100%;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+        @media only screen and (max-width: 500px) {
+ .row1{padding-top:500px;}
+}
+
+.clock {
+  
+   
+    font-size: 12px;
+    font-family: sans-serif;
+    letter-spacing: 10px;
+font-weight: bolder;
+
+}
+.carousel{
+           background-color: darkblue;
+    padding: inherit;
+    border-style: solid;
+    color: lightgray;
+    position:absolute;
+}
+.inset {border-style: outset;}
+.my-4 {
+    margin-top: 0rem!important;
+    margin-bottom: 1.5rem!important;
+        padding: 10px;
+}
+
+   .alert {
+  position: relative;
+  background-color: #333751;
+  color: white;
+  font-size: 14px;
+  padding:5px;
+  padding-right: 35px;
+  width:100%;
+  border-radius: 0;
+  margin-bottom: 0;
+  z-index: 1000;
+}
+
+
+button:focus {
+  outline: 0;
+}
+
+.close {
+  position: absolute;
+  top: 40%;
+  right: 1%;
+  border-radius: 0;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  color: $grey;
+  cursor: pointer;
+  &:hover {
+    color: inherit;
+  }
+}
+
+.btn {
+  position: absolute;
+  right: 15px;
+  margin-top: 0;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 1.4em;
+  text-align: center;
+  width: 30px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0px;
+  padding-bottom: 2px;
+  z-index:1000;
+}
+
+.reset {
+  background-color: #333751;
+  color: white;
+  transition: background-color 0.5s linear 0.1s;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+@media only screen and (max-width: 1200px){
+ .container {
+ width:auto;
+}
+
+}
+@media only screen and (max-width: 770px){
+
+.alert {
+  font-size: 12px;
+  padding:5px;
+  padding-right: 30px;
+}
+
+.close {
+  top: 40%;
+  right: 1%;
+  font-size: 40px;
+}
+
+.btn {
+  right: 8px;
+  font-size: 1.4em;
+   width: 27px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0px;
+  padding-bottom: 2px;
+}
+  .col-md-3 mb-3{
+    padding-top:600px;
+}
+}
+#wowslider-container1 .ws_playpause {
+       display: none;
+}
+#wowslider-container1 a.ws_prev {
+    display: none;
+}
+#wowslider-container1 a.ws_next {
+    display: none;
+}
+#wowslider-container1 
+.ws_bullets a {
+    display: contents;
+}
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+  <title>The Ambedkar Mission of India - Official Website | A Charity Organization | TAMI</title>
+  <link href="http://ambedkarmission.in/assets/img/logomain.png" rel="shortcut icon" type="image/x-icon" /><!--title logo-->
+<style>
+    html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+
+}
+.container{
+    width:100%;
+}
+</style>  
+  
+
+
+    
+    
+</head>
+
+
+
+<!-- ////////////////// --><!-- slideshow after first navbar -->
+<div class="header-top" id="top-of-page" style="background-color:rgb(0, 90, 255);">
+<div class="container" style="text-align:center;">
+  <div class="row">
+      <div class="col-sm-4" ><img  class="img-fluid" height="110px" width="350px" src="http://ambedkarmission.in/assets/img/logo1.png";/></div>
+      <div class="col-sm-4" ><img  class="img-fluid" height="80px" width="70px" src="http://ambedkarmission.in/assets/img/logo2.png";/><br><font weight="bold"; letter-spacing: 3px; color="white">"अम्बेडकर मिशन ऑफ़ इंडिया"</font></div>
+      <div class="col-sm-4" ><img class="img-fluid" height="90px" width="320px" src="http://ambedkarmission.in/assets/img/logo3.png";/></div>
+  </div>
+    </div>
+
+</div>
+<nav class="navbar sticky-top navbar-toggleable-sm navbar-light bg-faded" text-align="center" id="startchange" style="z-index: 999;background-color:darkblue;Border-bottom:Ridge;border-color:darkblue;">
+<div class="container-fluid">
+    
+    <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNavAltMarkup" data-toggle="collapse" type="button">
+    <span class="fa fa-bars" style="color:white"></span>
+    </button>
+
+<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+<div class="navbar-nav mr-auto" style="color: white"><a class="nav-item nav-link leaf first-nav-active" href="http://ambedkarmission.in/" id="first-nav"><b>Home</b></a>
+
+<div class="dropdown-link"><a class="nav-item nav-link leaf" id="first-nav"><b>Organization</b></a>
+
+<div class="dropdown-content" id="dropdown-content"><a href="">Rules & Regulation</a><a href="" target="_blank">Our Projects</a><a href="" target="_blank">Our Team</a><a href="http://ambedkarmission.in/trusteeboard.html" target="_blank">BoT</a></div>
+</div>
+<div class="dropdown-link"><a class="nav-item nav-link leaf" id="first-nav"><b>Become Our Member</b></a>
+</div>
+
+
+<div class="dropdown-link"><a href="" class="nav-item nav-link leaf" id="first-nav"><b>Career</b></a>
+
+
+</div>
+
+<div class="dropdown-link"><a class="nav-item nav-link leaf" id="first-nav"><b>Contact</b></a>
+
+<div class="dropdown-content" id="dropdown-content"><a href="http://ambedkarmission.in/contact.html">Contact Us</a></div>
+</div>
+</div>
+    
+
+</div>
+</div>
+</nav>
+
+<body>
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+}
+
+td, th {
+  border: 3px solid #0480FC;
+  text-align: center;
+  padding: 4px;
+}
+
+tr:nth-child(even) {
+  background-color: #FFFFFF;
+}
+</style>
+</head>
+<body>
+
+<h2 align="center" style="margin: 0px auto;">Board of Trustee (BoT)</h2>
+
+<table align="center" style="margin: 0px auto;">
+  <tr>
+    <th>Name</th>
+    <th>Role in Mission</th>
+    <th>Role in BoT</th>
+  </tr>
+  <tr>
+    <td>Mrs. Dipali Sarkar</td>
+    <td>Settler & Foundar</td>
+    <td>Chairman (Ex-officio)</td>
+  </tr>
+  <tr>
+    <td>Dr. Jagodish Chandra Mandal</td>
+    <td>Trustee & Secretary</td>
+    <td>Member Secretary (Ex-officio)</td>
+  </tr>
+  <tr>
+    <td>Mr. Ramprosad Mandal</td>
+    <td>Trustee</td>
+    <td>Member (Ex-officio)</td>
+  </tr>
+  <tr>
+    <td>Dr. Gurudas Mandal</td>
+    <td>Life Member & Joint Secretary</td>
+    <td>Member (Ex-officio)</td>
+  </tr>
+  <tr>
+    <td>Mr. Asit Biswas</td>
+    <td>Life Member & Cashier</td>
+    <td>Member (Ex-officio)</td>
+  </tr>
+  <tr>
+    <td>Mr. Bibhuti Bhusan Mandal</td>
+    <td>Life Member & Chief Advisor</td>
+    <td>Member (Ex-officio)</td>
+  </tr>
+  <tr>
+    <td>Mr. Dipak Kumar Das</td>
+    <td>Life Member & ICT Advisor</td>
+    <td>Member (Settler nominated)</td>
+  </tr>
+  <tr>
+    <td>Mr. Kutiswar Biswas</td>
+    <td>Life Member</td>
+    <td>Member (Settler nominated)</td>
+  </tr>
+  <tr>
+    <td>Mr. Jayanta Mandal</td>
+    <td>Life Member</td>
+    <td>Member (Settler nominated)</td>
+  </tr>
+  <tr>
+    <td>Mr. Mukunda Lal Sarkar</td>
+    <td>Life Member & Legal Advisor</td>
+    <td>Member (Settler nominated)</td>
+  </tr>
+</table>
+      
+  
+<br/>
+
+
+<br/>
+&nbsp;</div>
+</div>
+<!-- footer starts -->
+</body>
+<Style>
+    //autoprefixer & reset used
+//Tested on Chrome, Firefox, IE11, and iOS.  The responsiveness & the social section is a bit off on IE11.  I'm looking to fix that.
+//It would be best to break down the flex properties into logical classes.  I've actually done that more extensively on the live Pavilion site,  but I've only included one here: flex-rw.
+
+$primary-light-blue: white;
+$primary-line-color: white;
+* {
+  box-sizing: border-box
+}
+html, body {
+  height: 100%
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  //This justify-content is essentially unnecessary in Firefox and Chrome due to the flex: 1 1 auto on the main.  However, it's needed to push the footer down on IE11
+  justify-content: space-between
+  
+}
+ul {
+  list-style: none
+}
+a {
+  text-decoration: none
+}
+.generic-anchor {
+  color: white;
+  &:visited {
+    color: white
+  }
+  
+}
+.flex-rw {
+  display: flex;
+  flex-flow: row wrap;
+}
+//This main is mostly to push the footer to the bottom and for demo purposes.
+main {
+  flex: 1 1 auto; //For IE11
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 10em "Oswald", sans-serif;
+  color: rgb(155,155,155);
+  line-height: 1
+}
+footer {
+  background: rgb(55,55,55);
+  margin-top: auto;
+  width: 100%
+}
+.footer-list-top {
+  width: 33.333%
+}
+.footer-list-top > li {
+  text-align: center;
+ 
+}
+.footer-list-header {
+  padding: 10px 0 5px 0;
+  color: #fff;
+  font: 20px "Oswald", sans-serif
+}
+.footer-list-anchor {
+  font: 12px "Open Sans", sans-serif
+}
+.footer-social-section {
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 5px;
+}
+.footer-social-section::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 10px;
+  border-top: 1px solid $primary-line-color;
+  width: calc(100% - 20px)
+}
+.footer-social-overlap {
+  position: relative;
+  z-index: 2;
+  background: rgb(55,55,55);
+  padding: 0 20px
+}
+.footer-social-connect {
+  display: flex;
+  align-items: center;
+  font: 15px "Oswald", sans-serif;
+  color: #fff
+}
+.footer-social-small {
+  font-size: 0.6em;
+  padding: 0px 20px
+}
+.footer-social-overlap > a {
+  font-size: 3em
+}
+.footer-social-overlap > a:not(:first-child) {
+  margin-left: 0.38em
+}
+.footer-bottom-section {
+  width: 100%;
+  border-top: 1px solid $primary-line-color;
+  margin-top: 10px
+}
+.footer-bottom-section > div:first-child {
+  margin-right: auto
+}
+.footer-bottom-wrapper {
+  font-size: 10 px;
+  color: #fff
+}
+.footer-address {
+  display: inline;
+  font-style: normal
+}
+@media only screen and (max-width: 768px) {
+  .footer-list-header {
+    font-size: 2em
+  }
+  .footer-list-anchor {
+    font-size: 1.1em
+  }
+  .footer-social-connect {
+    font-size: 2.5em
+  }
+  .footer-social-overlap > a {
+    font-size: 2.24em
+  }
+  .footer-bottom-wrapper {
+    font-size: 1.3em
+  }
+}
+@media only screen and (max-width: 568px) {
+  main {
+    font-size: 5em
+  }
+  .footer-list-top {
+    width: 100%
+  }
+  .footer-list-header {
+    font-size: 3em;
+  }
+  .footer-list-anchor {
+    font-size: 1.5em
+  }
+  .footer-social-section {
+    justify-content: center
+  }
+  .footer-social-section::after {
+    top: 25%
+  }
+  .footer-social-connect {
+    margin-bottom: 10px;
+    padding: 0 10px
+  }
+  .footer-social-overlap {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-social-icons-wrapper {
+    width: 100%;
+    padding: 0
+  }
+  .footer-social-overlap > a:not(:first-child) {
+    margin-left: 20px;
+  }
+  .footer-bottom-section {
+    padding: 0 5px 10px 5px
+  }
+  .footer-bottom-wrapper {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px
+  }
+}
+@media only screen and (max-width: 480px) {
+  .footer-social-overlap > a {
+    margin: auto
+  }
+  .footer-social-overlap > a:not(:first-child) {
+    margin-left: 0;
+  }
+  .footer-bottom-rights {
+    display: block
+  }
+}
+@media only screen and (max-width: 320px) {
+  .footer-list-header {
+    font-size: 2.2em
+  }
+  .footer-list-anchor {
+    font-size: 1.2em
+  }
+  .footer-social-connect {
+    font-size: 2.4em
+  }
+  .footer-social-overlap > a {
+    font-size: 2.24em
+  }
+  .footer-bottom-wrapper {
+    font-size: 1.3em
+  }
+}
+
+</Style>
+
+<main>
+  </main>
+<!--Some of this HTML is directly from Pavilion.  You can change it to whatever you want if you want to mimic this design.-->
+<footer class="flex-rw" style="background-color: darkblue;padding:0px;">
+  
+  <ul class="footer-list-top">
+    <li>
+    <h4 class="footer-list-header"></h4></li>
+    <li><a href="#" class="nav-item nav-link leaf" target="_blank">News</a></li>
+    <li><a href="#" class="nav-item nav-link leaf" target="_blank">Events</a></li>
+    <li><a href="http://ambedkarmission.in/contact.html" class="nav-item nav-link leaf" target="_blank">Contact Us</a></li>
+
+     
+  </ul>
+  <ul class="footer-list-top">
+    <li>
+      <h4 class="footer-list-header"><b><u>Quick Links</u></b></h4></li>
+
+    <li><a href="#" class="nav-item nav-link leaf" target="_blank">Home</a></li>
+    <li><a href="#" class="nav-item nav-link leaf" target="_blank">Become Our Member</a></li>
+
+    <li><a href='' ><a href="#" class="nav-item nav-link leaf" target="_blank">About Us</a></li>
+     <li><a href="#" class="nav-item nav-link leaf" target="_blank">Mission and Vission</a></li>
+  </ul>
+  <ul class="footer-list-top">
+    <li id='help'>
+      <h4 class="footer-list-header" class="nav-item nav-link leaf" target="_blank"></h4></li>
+ 
+<li><a href="#" class="nav-item nav-link leaf" target="_blank">Rules & Regulations</a></li>
+<li><a href="#" class="nav-item nav-link leaf" target="_blank">Our Projects</a></li>
+<li><a href="#" class="nav-item nav-link leaf" target="_blank">Our Team</a></li>
+</ul>
+  
+  <section class="footer-social-section flex-rw" >
+      
+      <span class="footer-social-overlap footer-social-icons-wrapper" style="Background-color:darkblue;">
+      <a href="https://www.facebook.com/ambedkarmissionofindia" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
+      <a href="#" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
+      <a href="#" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
+      <a href="#" class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
+      <a href="#" class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
+      </span>
+  </section>
+  <section class="footer-bottom-section flex-rw">
+<div class="footer-bottom-wrapper" style="text-align:center;">   
+<i class="fa fa-copyright" role="copyright">
+ 
+    
+</i> Copyright © 2022 The Ambedkar Mission of India. All rights reserved. </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Visitor Number (Last 1 months): 100 
+    </div>
+    <div class="footer-bottom-wrapper">
+      </div>
+  </section>
+</footer></html>
